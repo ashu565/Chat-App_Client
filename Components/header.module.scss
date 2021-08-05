@@ -1,0 +1,126 @@
+.logo {
+  height: 2rem;
+  border-bottom: 1px solid #aaa;
+}
+.container {
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.card {
+  padding: 0.4rem 0.7rem;
+  margin: 0 2.5rem;
+  box-shadow: 0 5px 13px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  transform: translateY(-150px);
+  p {
+    line-height: 25px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin: 0.2rem 0;
+  }
+  input {
+    padding: 0.4rem 0.3rem;
+    margin: 0.1rem 0;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+  }
+  &_btn {
+    margin: 1rem auto;
+    margin-right: 0.8rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: #eb3366;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+.attention {
+  text-align: center;
+  font-weight: 500;
+  color: rgb(109, 103, 103);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.sent {
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  span {
+    background-color: #eb3366;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    margin-right: 0.3rem;
+  }
+  width: 100%;
+}
+.recieved {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(51, 47, 47);
+  position: relative;
+  width: 100%;
+  span {
+    padding: 0.3rem 0.5rem;
+    background-color: #e1e1e1;
+    border-radius: 0.2rem;
+  }
+  small {
+    position: absolute;
+    top: -15px;
+    left: 1px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.input_box {
+  height: 2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  border-radius: 0.2rem;
+  border: 1px solid #aaa8a8;
+  padding-left: 0.5rem;
+  display: block;
+}
+.input_btn {
+  margin-top: 0.4rem;
+  background-color: #eb3366;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+  min-height: 2.5rem;
+  border-radius: 0.2rem;
+}
+.roomid {
+  font-weight: 500;
+  margin-top: 0.2rem;
+  span {
+    color: #eb3366;
+  }
+}
+.message {
+  margin-top: 1rem;
+  height: 24rem;
+  overflow: scroll;
+}

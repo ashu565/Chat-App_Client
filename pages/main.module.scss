@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+  img {
+    height: 5rem;
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #eb3366;
+  }
+}
+.special {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  background-color: #eb3366;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 0.2rem;
+  min-width: 10rem;
+}
+.name {
+  text-align: center;
+  font-weight: 500;
+}
