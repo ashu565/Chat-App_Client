@@ -6,7 +6,7 @@ import Header from "../../Components/header";
 import cryptoRandomString from "crypto-random-string";
 import Link from "next/link";
 import { useRouter } from "next/router";
-export default function nameid() {
+export default function Nameid() {
   const router = useRouter();
   const { roomid, nameid } = router.query;
   const [messages, setMessages] = useState([]);
