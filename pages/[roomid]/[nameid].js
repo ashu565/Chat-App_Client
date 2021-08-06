@@ -1,11 +1,11 @@
-import { useRouter } from "next/router";
 import socketio from "socket.io-client";
 import { useEffect, useState, useRef } from "react";
 import RenderMesseges from "../../Components/RenderMesseges";
 import styles from "../../Components/header.module.scss";
 import Header from "../../Components/header";
 import cryptoRandomString from "crypto-random-string";
-
+import Link from "next/link";
+import { useRouter } from "next/dist/client/router";
 export default function nameid() {
   const router = useRouter();
   const { roomid, nameid } = router.query;
@@ -52,10 +52,6 @@ export default function nameid() {
       socket.emit("user-left-server", { room: roomid, name });
     };
   }, []);
-  const HandleData = (e) => {
-    e.preventDefault();
-    router.push("/");
-  };
   const HandleSendMessage = (e) => {
     e.preventDefault();
     if (!text.trim()) return;
@@ -102,9 +98,9 @@ export default function nameid() {
         >
           Send
         </button>
-        <button className={styles.input_btn} onClick={HandleData}>
-          Exit from Room
-        </button>
+        <Link href="/">
+          <button className={styles.input_btn}>Exit from Room</button>
+        </Link>
         <div className={styles.roomid}>
           Room Id : <span>{roomid}</span>
         </div>
