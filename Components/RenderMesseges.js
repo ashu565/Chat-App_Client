@@ -4,6 +4,7 @@ import styles from './header.module.scss';
 export default function RenderMesseges({messages}) {
     return (
         <>
+        <div className = {styles.attention} >Welcome To Let's Chat</div>
         {messages.map((message) => {
             const {type} = message;
             if(type === 'attention') {

@@ -49,7 +49,7 @@
   display: block;
 }
 .sent {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -68,13 +68,14 @@
   font-weight: 500;
   font-size: 0.9rem;
   margin-left: 0.3rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: rgb(51, 47, 47);
   position: relative;
   width: 100%;
+  z-index: 99;
   span {
     padding: 0.3rem 0.5rem;
     background-color: #e1e1e1;
@@ -85,6 +86,7 @@
     top: -15px;
     left: 1px;
     color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
   }
 }
 .form {

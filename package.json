@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "crypto-random-string": "^4.0.0",
     "framer-motion": "^4.1.17",
     "next": "11.0.1",
     "node-sass": "^5.0.0",
