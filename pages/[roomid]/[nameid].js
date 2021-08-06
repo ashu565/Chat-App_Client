@@ -5,7 +5,7 @@ import styles from "../../Components/header.module.scss";
 import Header from "../../Components/header";
 import cryptoRandomString from "crypto-random-string";
 import Link from "next/link";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 export default function nameid() {
   const router = useRouter();
   const { roomid, nameid } = router.query;
