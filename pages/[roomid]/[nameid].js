@@ -17,7 +17,12 @@ export default function Nameid() {
 
   // const Endpoint = "http://localhost:3000";
   const Endpoint = "https://chat-app-i.herokuapp.com";
-  const socket = socketio(Endpoint);
+  const socket = socketio(Endpoint, {
+    withCredentials: true,
+    extraHeaders: {
+      "my-custom-header": "abcd",
+    },
+  });
 
   useEffect(() => {
     socket.emit("create", { room: roomid, name });
@@ -36,6 +41,7 @@ export default function Nameid() {
       }
     });
     socket.on("user-joined", (name) => {
+      console.log("hey");
       setMessages((messages) => [
         ...messages,
         {
