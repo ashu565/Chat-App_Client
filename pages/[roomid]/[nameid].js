@@ -6,6 +6,7 @@ import Header from "../../Components/header";
 import cryptoRandomString from "crypto-random-string";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
 export default function Nameid() {
   const router = useRouter();
   const { roomid, nameid } = router.query;
@@ -16,18 +17,21 @@ export default function Nameid() {
 
   const Endpoint = "http://localhost:3000";
   const socket = socketio(Endpoint);
+
   useEffect(() => {
     socket.emit("create", { room: roomid, name });
     socket.on("to-client", ({ message, name, userid }) => {
       if (userid !== id) {
-        setMessages((messages) => [
-          ...messages,
-          {
-            type: "Recieved",
-            name: name,
-            message: message,
-          },
-        ]);
+        setMessages((messages) => {
+          return [
+            ...messages,
+            {
+              type: "Recieved",
+              name: name,
+              message: message,
+            },
+          ];
+        });
       }
     });
     socket.on("user-joined", (name) => {
