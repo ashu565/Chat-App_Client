@@ -15,7 +15,8 @@ export default function Nameid() {
   const [text, setText] = useState("");
   const [id, setId] = useState(shortid.generate());
 
-  const Endpoint = "http://localhost:3000";
+  // const Endpoint = "http://localhost:3000";
+  const Endpoint = "https://chat-app-i.herokuapp.com/";
   const socket = socketio(Endpoint);
 
   useEffect(() => {
