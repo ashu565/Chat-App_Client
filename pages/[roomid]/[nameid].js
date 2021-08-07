@@ -3,9 +3,9 @@ import { useEffect, useState, useRef } from "react";
 import RenderMesseges from "../../Components/RenderMesseges";
 import styles from "../../Components/header.module.scss";
 import Header from "../../Components/header";
-import cryptoRandomString from "crypto-random-string";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import shortid from "shortid";
 
 export default function Nameid() {
   const router = useRouter();
@@ -13,7 +13,7 @@ export default function Nameid() {
   const [messages, setMessages] = useState([]);
   const [name, setName] = useState(nameid);
   const [text, setText] = useState("");
-  const [id, setId] = useState(cryptoRandomString({ length: 15 }));
+  const [id, setId] = useState(shortid.generate());
 
   const Endpoint = "http://localhost:3000";
   const socket = socketio(Endpoint);
